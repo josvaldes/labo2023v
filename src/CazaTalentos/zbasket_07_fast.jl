@@ -3,7 +3,7 @@
 #si hay un empate ( dos máximos) se queda con el que esta primero en el vector
 using Random
 
-Random.seed!(102191)
+Random.seed!(792637)
 
 function ftirar(prob, qty)
   return  sum( rand() < prob for i in 1:qty )

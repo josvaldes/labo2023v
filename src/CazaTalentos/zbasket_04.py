@@ -1,6 +1,6 @@
 import  numpy as np
 
-np.random.seed(102191)
+np.random.seed(792637)
 
 #calcula cuantos encestes logra un jugador con indice de enceste prob
 #que hace qyt tiros libres
