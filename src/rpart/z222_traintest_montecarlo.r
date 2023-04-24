@@ -75,7 +75,7 @@ dataset  <- dataset[ clase_ternaria!= "" ]
 
 
 param_basicos  <- list( "cp"=          -1,  #complejidad minima
-                        "minsplit"=   900,  #minima cantidad de registros en un nodo para hacer el split
+                        "minsplit"=   876,  #minima cantidad de registros en un nodo para hacer el split
                         "minbucket"=  440,  #minima cantidad de registros en una hoja
                         "maxdepth"=     5 ) #profundidad máxima del arbol
 
