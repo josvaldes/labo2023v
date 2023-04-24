@@ -14,7 +14,7 @@ require("ranger")
 require("randomForest")  #solo se usa para imputar nulos
 
 #Aqui se debe poner la carpeta de la computadora local
-setwd("X:\\gdrive\\austral2023v\\")  #Establezco el Working Directory
+setwd("C:/Users/Josvaldes/Documents/Maestria/Austral/1ano/laboratorioImp1")  #Establezco el Working Directory
 
 #cargo los datos donde entreno
 dataset  <- fread("./datasets/dataset_pequeno.csv", stringsAsFactors= TRUE)
@@ -29,13 +29,13 @@ dapply  <- dataset[ foto_mes == 202109 ]
 
 #genero el modelo de Random Forest con la libreria ranger
 #notar como la suma de muchos arboles contrarresta el efecto de min.node.size=1
-param  <- list( "num.trees"=       300,  #cantidad de arboles
+param  <- list( "num.trees"=       600,  #cantidad de arboles
                 "mtry"=             30,  #cantidad de variables que evalua para hacer un split  sqrt(ncol(dtrain))
-                "min.node.size"=  1500,  #tamaño minimo de las hojas
-                "max.depth"=        12   # 0 significa profundidad infinita
+                "min.node.size"=  1600,  #tamaño minimo de las hojas
+                "max.depth"=        10   # 0 significa profundidad infinita
               )
 
-set.seed(102191) #Establezco la semilla aleatoria
+set.seed(792637) #Establezco la semilla aleatoria
 
 setorder( dtrain, clase_ternaria )  #primero quedan los BAJA+1, BAJA+2, CONTINUA
 
@@ -62,7 +62,7 @@ entrega  <- as.data.table( list( "numero_de_cliente"= dapply[  , numero_de_clien
 # HT  representa  Hiperparameter Tuning
 dir.create( "./exp/",  showWarnings = FALSE ) 
 dir.create( "./exp/KA3310/", showWarnings = FALSE )
-archivo_salida  <- "./exp/KA3310/KA3310_001.csv"
+archivo_salida  <- "./exp/KA3310/KA3310_002.csv"
 
 #genero el archivo para Kaggle
 fwrite( entrega, 
