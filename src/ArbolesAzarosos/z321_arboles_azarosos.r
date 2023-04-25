@@ -15,7 +15,7 @@ PARAM$experimento  <- 3210
 PARAM$semilla  <- 854921      #Establezco la semilla aleatoria, cambiar por SU primer semilla
 
 #parameetros rpart
-PARAM$rpart_param   <- list( "cp"=          -0.99,
+PARAM$rpart_param   <- list( "cp"=          -1,
                               "minsplit"=  876,
                               "minbucket"=  73,
                               "maxdepth"=   8 )
