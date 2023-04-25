@@ -29,10 +29,10 @@ dapply  <- dataset[ foto_mes == 202109 ]
 
 #genero el modelo de Random Forest con la libreria ranger
 #notar como la suma de muchos arboles contrarresta el efecto de min.node.size=1
-param  <- list( "num.trees"=       1000,  #cantidad de arboles
-                "mtry"=             25,  #cantidad de variables que evalua para hacer un split  sqrt(ncol(dtrain))
-                "min.node.size"=  1200,  #tamaño minimo de las hojas
-                "max.depth"=        12   # 0 significa profundidad infinita
+param  <- list( "num.trees"=       600,  #cantidad de arboles
+                "mtry"=             35,  #cantidad de variables que evalua para hacer un split  sqrt(ncol(dtrain))
+                "min.node.size"=  1600,  #tamaño minimo de las hojas
+                "max.depth"=        10   # 0 significa profundidad infinita
               )
 
 set.seed(792637) #Establezco la semilla aleatoria
@@ -62,7 +62,7 @@ entrega  <- as.data.table( list( "numero_de_cliente"= dapply[  , numero_de_clien
 # HT  representa  Hiperparameter Tuning
 dir.create( "./exp/",  showWarnings = FALSE ) 
 dir.create( "./exp/KA3310/", showWarnings = FALSE )
-archivo_salida  <- "./exp/KA3310/KA3310_005.csv"
+archivo_salida  <- "./exp/KA3310/KA3310_007.csv"
 
 #genero el archivo para Kaggle
 fwrite( entrega, 

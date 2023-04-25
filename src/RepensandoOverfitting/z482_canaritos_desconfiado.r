@@ -6,7 +6,7 @@ require("data.table")
 require("rpart")
 require("rpart.plot")
 
-setwd("X:\\gdrive\\austral2023v\\" )  #establezco la carpeta donde voy a trabajar
+setwd("C:/Users/Josvaldes/Documents/Maestria/Austral/1ano/laboratorioImp1" )  #establezco la carpeta donde voy a trabajar
 
 #cargo el dataset
 dataset  <- fread( "./datasets/dataset_pequeno.csv")
@@ -31,6 +31,8 @@ for( i in 1:30 ) dataset[ , paste0("canarito", i ) :=  runif( nrow(dataset)) ]
                  minsplit=  2000,
                  minbucket= 1000,
                  maxdepth=     8 )
+
+
 
 
 pdf(file = "arbol_canaritos_desconfiado.pdf", width=28, height=4)
