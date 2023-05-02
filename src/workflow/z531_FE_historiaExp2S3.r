@@ -21,11 +21,11 @@ require("lightgbm")
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento <- "FE5310"
+PARAM$experimento <- "FE5312"
 
 PARAM$exp_input  <- "DR5210"
 
-PARAM$lag1  <- TRUE
+PARAM$lag1  <- FALSE
 PARAM$lag2  <- FALSE
 PARAM$lag3  <- FALSE
 
@@ -54,7 +54,7 @@ PARAM$RandomForest$max.depth  <-  5
 PARAM$RandomForest$min.node.size  <- 500
 PARAM$RandomForest$mtry  <- 15
 
-PARAM$CanaritosAsesinos  <- 0
+PARAM$CanaritosAsesinos  <- 0.5
 # FIN Parametros del script
 
 #------------------------------------------------------------------------------

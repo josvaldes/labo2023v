@@ -16,11 +16,11 @@ require("lightgbm")
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento  <- "ZZ5910"
-PARAM$exp_input  <- "HT5510"
+PARAM$experimento  <- "ZZ5911"
+PARAM$exp_input  <- "HT5511"
 
 PARAM$modelos  <- 2       #aumentar si se quieren mas modelos
-PARAM$semilla  <- 102191
+PARAM$semilla  <- 848461
 
 PARAM$envios_desde  <-  7000
 PARAM$envios_hasta  <- 13000
