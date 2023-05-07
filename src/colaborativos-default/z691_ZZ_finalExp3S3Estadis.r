@@ -17,8 +17,8 @@ require("lightgbm")
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento  <- "ZZ8910"
-PARAM$exp_input  <- "HT8510"
+PARAM$experimento  <- "ZZ8910ests3"
+PARAM$exp_input  <- "HT8510ests3"
 
 PARAM$modelos  <- 2       #aumentar si se quieren mas modelos
 PARAM$semilla  <- 904619  # siempre se debera probar con 5 semillas, en 5 experimentos distintos, y presentar la media y/o los graficos detallados de las cinco curvas si corresponde
